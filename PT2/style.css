@@ -1,0 +1,22 @@
+*:focus {
+    outline: none;
+}
+
+input[type = text] {
+    width: 200px;
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+input[type = submit] {
+    width: 100px;
+    padding: 5px;
+    background-color: silver;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+    input[type = submit]:hover {
+        background-color: rgb(122, 122, 122);
+    }
