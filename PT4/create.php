@@ -12,5 +12,5 @@
 
     // Create a page
     $page = new Template();
-    $page->setTemplate('templates/edit.tmp');
+    $page->setTemplate('templates/create.tmp');
     echo $page->getPage();

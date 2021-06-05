@@ -44,7 +44,7 @@
          * 
          * @return string final page
          */
-        public function getPage($id = 0) {
+        public function getPage($id = 0, $flag = false) {
             $sql = new PostsList();
             $postsList = $sql->getPostsList('posts_list');
             $elements = '';
@@ -62,14 +62,22 @@
 
             // Get final categories list
             foreach($categoriesList as $element) {
-                if ($element[0] === $postsList[$id][6]) {
-                    $elements .= "<option selected>{$element[0]}. {$element[1]}</option>";
+                // If we want to load and selected category
+                if ($flag) {
+                    if ($element[0] === $postsList[$id][6]) {
+                        $elements .= "<option selected>{$element[0]}. {$element[1]}</option>";
+                    }
+                    else {
+                        $elements .= "<option>{$element[0]}. {$element[1]}</option>";
+                    }
                 }
+                // Another situation
                 else {
                     $elements .= "<option>{$element[0]}. {$element[1]}</option>";
                 }
-                
             }
+
+            
 
             // Get final information about specifical post
             $result = preg_replace("/{TITLE}/", $postsList[$id][1], $result);

@@ -42,7 +42,7 @@
             $list = $this->sql->selectPosts();
             
             // Sorting result array in alphabet order
-            uasort($list, function($a, $b) { return ($a[3] <= $b[3]) ? 1 : -1; });
+            uasort($list, function($a, $b) { return ($a[4] <= $b[4]) ? 1 : -1; });
             
             return $list;
         }

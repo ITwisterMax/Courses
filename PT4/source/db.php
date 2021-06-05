@@ -15,10 +15,10 @@
          * @var array parameters for connecting to the database
          */
         private $infoArray = array(
-            'ip' => '',
-            'login' => '',
-            'password' => '',
-            'db' => ''
+            'ip' => '127.0.0.1',
+            'login' => 'root',
+            'password' => '12345678',
+            'db' => 'pt4'
         );
 
         /**
