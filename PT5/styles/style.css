@@ -107,23 +107,20 @@ a {
 
 .container {
     display: flex;
-    width: 850px;
-    height: 335px;
+    width: 660px;
+    min-height: 335px;
     border: 2px solid #9097A2;
     background: #D3D4DA;
     border-radius: 5px;
 }
     .left img {
-        width: 28vw;
+        width: 22vw;
         min-height: 44vh;
         border-radius: 5px;
     }
-    .right {
-        padding-left: 2em;
+    .right label {
+        font: 20px "Trebuchet MS", "Lucida Sans";
+        padding: .4em .8em .4em .8em;
+        margin-bottom: 2vh;
+        border-radius: 5px;
     }
-        .right label {
-            font: 20px "Trebuchet MS", "Lucida Sans";
-            padding: .4em .8em .4em .8em;
-            margin-bottom: 2vh;
-            border-radius: 5px;
-        }

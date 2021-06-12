@@ -12,7 +12,7 @@
     <a href="index.php">Return</a><br><br>
     <div class="container">
         <div class="left">
-            <img src="styles/Breaking-News.jpg">  
+            <img src="styles/photo.png">  
         </div>
         <div class="right">
             <br><label>Title: {TITLE}</label><br><br>

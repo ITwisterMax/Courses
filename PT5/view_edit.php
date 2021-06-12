@@ -2,12 +2,12 @@
     require_once 'source/template.php';
 
     if ($_GET['num'] == 1) {
-        // Create a page
+        // Create a view page
         $page = new Template();
         $page->setTemplate('templates/view.tpl');
         echo $page->getSomePage($_GET['id'], true);
     }
-    else {
+    elseif ($_GET['num'] == 2){
         // Update a specifical post and return to the homepage
         if (isset($_POST['updatePost'])) {
             $list = new PostsList();
@@ -26,7 +26,7 @@
             echo '<script>location.replace("index.php");</script>';
         }
 
-        // Create a page
+        // Create a edit page
         $page = new Template();
         $page->setTemplate('templates/edit.tpl');
         echo $page->getSomePage($_GET['id'], true);

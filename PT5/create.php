@@ -10,7 +10,7 @@
         echo '<script>location.replace("index.php");</script>';
     }
 
-    // Create a page
+    // Create a create page
     $page = new Template();
     $page->setTemplate('templates/create.tpl');
     echo $page->getSomePage();
