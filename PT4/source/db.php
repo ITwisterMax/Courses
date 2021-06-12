@@ -1,6 +1,6 @@
 <?php 
     /**
-     * Class for working with the MySQL database
+     * Class for working with the MySQL database (MySQLi)
      *
      * @author Maksim Mikhalkov
      * @version 1.0

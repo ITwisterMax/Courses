@@ -3,5 +3,5 @@
 
     // Create a page
     $page = new Template();
-    $page->setTemplate('templates/index.tmp');
+    $page->setTemplate('templates/index.tpl');
     echo $page->getPage();

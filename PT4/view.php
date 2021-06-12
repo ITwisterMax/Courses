@@ -13,5 +13,5 @@
 
     // Create a page
     $page = new Template();
-    $page->setTemplate('templates/view.tmp');
+    $page->setTemplate('templates/view.tpl');
     echo $page->getPage($_GET['id'], true);

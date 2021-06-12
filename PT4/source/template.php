@@ -14,11 +14,6 @@
          */
         private $template;
 
-        public function __construct()
-        {
-            // Nothing here
-        }
-
         /**
          * Set main template
          *
@@ -28,10 +23,10 @@
             if (!is_file($mainTemplateFilename)) {
                 file_put_contents(
                     'logs/errors.txt', 
-                    date('Y-m-d H:i:s') . " | Template error (File not found)\n",
+                    date('Y-m-d H:i:s') . ' | Template error (File "' . $mainTemplateFilename . "\" not found)\n",
                     FILE_APPEND
                 );
-                die('Template error (File not found)');
+                die('Template error (File "' . $mainTemplateFilename . '" not found)');
             }
 
             $this->template = file_get_contents($mainTemplateFilename);
@@ -76,8 +71,6 @@
                     $elements .= "<option>{$element[0]}. {$element[1]}</option>";
                 }
             }
-
-            
 
             // Get final information about specifical post
             $result = preg_replace("/{TITLE}/", $postsList[$id][1], $result);

@@ -20,6 +20,8 @@ body {
         padding: .4em .4em .4em .8em;
         margin: .5em 0 .5em 2.5em;
         background: #D3D4DA;
+        border: 2px solid #9097A2;
+        border-radius: 5px;
         color: #444;
         text-decoration: none;
         transition: all .3s ease-out;
@@ -35,6 +37,7 @@ body {
         top: 50%;
         margin-top: -1em;
         background: #9097A2;
+        border-radius: 5px;
         height: 2em;
         width: 2em;
         line-height: 2em;
@@ -62,6 +65,7 @@ input[type = text] {
     border: 2px solid #9097A2;
     background: #D3D4DA;
     margin-bottom: 2vh;
+    border-radius: 5px;
 }
 
 textarea {
@@ -71,6 +75,7 @@ textarea {
     border: 2px solid #9097A2;
     background: #D3D4DA;
     margin-bottom: 2vh;
+    border-radius: 5px;
 }
 
 select {
@@ -80,6 +85,7 @@ select {
     border: 2px solid #9097A2;
     background: #D3D4DA;
     margin-bottom: 4vh;
+    border-radius: 5px;
 }
 
 input[type = submit] {
@@ -88,6 +94,7 @@ input[type = submit] {
     padding: .4em .4em .4em .8em;
     border: 2px solid #9097A2;
     background: #D3D4DA;
+    border-radius: 5px;
 }
     input[type = submit]:hover {
         background: #DCDDE1;
