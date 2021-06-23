@@ -58,6 +58,7 @@ form {
             }
             input[type = submit]:hover {
                 background-color: silver;
+                cursor: pointer;
                 transition: all .3s ease-out;
             }
         input[type = checkbox] {

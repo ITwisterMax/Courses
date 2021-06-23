@@ -69,13 +69,13 @@
 
             // Try login by login and password
             if (isset($_POST['letLog'])) {
-                if ((isset($_SESSION['logged_in'])) && ($_SESSION['logged_in'] === true)) {
+                if ((isset($_SESSION['loggedIn'])) && ($_SESSION['loggedIn'] === true)) {
                     header('Location: view.php');
                 }
                 else {
                     $login = (isset($_POST['login'])) ? $_POST['login'] : '';
                     $password = (isset($_POST['password'])) ? $_POST['password'] : '';
-                    $remember = (isset($_POST['remember_me'])) ? true : false;
+                    $remember = (isset($_POST['rememberMe'])) ? true : false;
         
                     $result = $this->login($login, $password, $remember);
                     if ($result === true) {
@@ -155,7 +155,7 @@
          * @return bool register result
          */
         private function register($name, $email, $login, $password, $captcha) {
-            if (($captcha == $_SESSION['rand_number']) && !empty($name) && !empty($email) && !empty($login) && !empty($password)) {
+            if (($captcha == $_SESSION['randNumber']) && !empty($name) && !empty($email) && !empty($login) && !empty($password)) {
                 return $this->sql->regNewUser($name, $email, $login, $password);
             }
             else {

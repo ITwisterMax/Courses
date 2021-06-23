@@ -28,6 +28,8 @@ body {
         }
         .post li:hover {
             background-color: silver;
+            cursor: pointer;
+            transition: all .3s ease-out;
         }       
             .post li .left img {
                 margin-top: 20px;
@@ -47,25 +49,80 @@ body {
     }
         input[type = submit]:hover {
             background-color: silver;
+            cursor: pointer;
             transition: all .3s ease-out;
         }
 
-.right-block {
-    font-family: 'Exo 2', sans-serif;
-    font-size: 16px;
-    position: fixed;
-    margin-left: 1200px;
-    display: flex;
-    margin-top: 20px;
+@media screen and (max-width:1000px) {
+    .right-block {
+        font-family: 'Exo 2', sans-serif;
+        font-size: 16px;
+        display: flex;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .right-block {
+        font-family: 'Exo 2', sans-serif;
+        font-size: 16px;
+        position: fixed;
+        margin-left: 80vw;
+        display: flex;
+        margin-top: 20px;
+    }
 }
     .right-block img {
-        margin-top: 10px;
         margin-right: 10px;
         width: 50px;
+        height: 50px;
+        border-radius: 30px;
     }
+
+.left-container form {
+    display: flex;
+}
+    .left-container input[type = file] {
+        background-image: url("../images/search.png");
+        background-size: 20px;
+        background-repeat: no-repeat;
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+        color: transparent;
+        text-indent: -99999px;
+        transition: all .3s ease-out;
+    }
+        .left-container input[type = file]:hover {
+            background-size: 90%;
+            cursor: pointer;
+            transition: all .3s ease-out;
+        }
+    .left-container input[type = submit] {
+        background-image: url("../images/submit.png");
+        background-size: 20px;
+        background-repeat: no-repeat;
+        border: none;
+        margin: 0;
+        background-color: white;
+        width: 20px;
+        height: 20px;
+        color: transparent;
+        text-indent: -99999px;
+        transition: all .3s ease-out;
+    }
+        .left-container input[type = submit]:hover {
+            background-size: 90%;
+            cursor: pointer;
+            transition: all .3s ease-out;
+        }
+
+.right-container {
+    margin-top: 1px;
+}
 
 a {
     display: inline-block;
     min-width: 20px;
-    padding: 6.4px;
+    padding: 10.4px;
 }

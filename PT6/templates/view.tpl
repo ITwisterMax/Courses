@@ -19,6 +19,11 @@
     <div class="right-block">
         <div class="left-container">
             <img src="images/{IMAGE}">
+            <form method="POST" enctype="multipart/form-data" action="view.php" name="loadForm">
+                <input type="hidden" name="MAX_FILE_SIZE" value="300000">
+                <input name="userfile" type="file">
+                <input type="submit" name="load">
+            </form>
         </div>        
         <div class="right-container">
             <label>Welcome back, {NAME}!</label>

@@ -78,27 +78,44 @@
             $prevOffset = ($offset - LIMIT >= 0) ? $offset - LIMIT : $offset;
             $nextOffset = ($offset + LIMIT <= $last) ? $offset + LIMIT : $offset;
 
-            $navigation = "<a href=\"view.php?offset=0\">First</a> <a href=\"view.php?offset=$prevOffset\">Prev</a> {OTHER}
+            $navigation = "<a href=\"view.php\">First</a> <a href=\"view.php?offset=$prevOffset\">Prev</a> {OTHER}
                             <a href=\"view.php?offset=$nextOffset\">Next</a> <a href=\"view.php?offset=$last\">Last</a>";
             
             // Calculation a page numbers
             $pages = '';
-            // Last pages
-            if ($offset / LIMIT + LIMIT <= $total) {
-                for ($i = 1; $i <= LIMIT; $i++) {
+            if ($offset / LIMIT + LIMIT - 1 <= $total) {
+                for ($i = 1 - intdiv(LIMIT, 2); $i <= LIMIT - intdiv(LIMIT, 2); $i++) {
                     $number = $offset / LIMIT + $i;
-                    $position = ($number - 1) * LIMIT;
-    
-                    if ($position == $offset) {
-                        $pages .= "<a href=\"view.php?offset=$position\" style=\"color: red\">$number</a> ";
-                    }
-                    else {
-                        $pages .= "<a href=\"view.php?offset=$position\">$number</a> ";
-                    }
                     
+                    // Other pages
+                    if ($number > 0) {
+                        $position = ($number - 1) * LIMIT;
+                        
+                        if ($position == $offset) {
+                            $pages .= "<a href=\"view.php?offset=$position\" style=\"color: red\">$number</a> ";
+                        }
+                        else {
+                            $pages .= "<a href=\"view.php?offset=$position\">$number</a> ";
+                        }
+                    }
+                    // First 5 pages
+                    else {
+                        $current = 0;
+                        for ($i = 1; $i <= LIMIT; $i++) {
+                            $number = $current + $i;
+                            $position = ($number - 1) * LIMIT;
+
+                            if ($position == $offset) {
+                                $pages .= "<a href=\"view.php?offset=$position\" style=\"color: red\">$number</a> ";
+                            }
+                            else {
+                                $pages .= "<a href=\"view.php?offset=$position\">$number</a> ";
+                            }
+                        }
+                    }
                 }
             }
-            // Other pages
+            // Last 5 pages
             else {
                 $current = $total - LIMIT;
                 for ($i = 1; $i <= LIMIT; $i++) {

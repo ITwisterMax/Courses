@@ -180,7 +180,6 @@
                 $email = $this->link->quote(trim($email));
                 $login = $this->link->quote(trim($login));
                 $password = $this->link->quote(sha1(trim($password)));
-                $avatar = mt_rand(0, 2) . '.png';
 
                 $query = $this->link->query("SELECT * FROM `users` WHERE `login` = $login");
                 $res = $query->fetchAll();
@@ -188,7 +187,7 @@
                 if (!$res)
                 {
                     $result = $this->link->prepare("INSERT INTO `users` SET `name` = $name, `email` = $email,
-                                                `login` = $login, `password` = $password, `avatar` = '$avatar'");
+                                                `login` = $login, `password` = $password");
                     return $result->execute();
                 }
 
@@ -219,7 +218,7 @@
                 if ($res)
                 {
                     $password = mt_rand(1, 2000000000) . mt_rand(1000000, 9999999) . mt_rand(1, 2000000000);
-                    $_SESSION['new_password'] = $password;
+                    $_SESSION['newPassword'] = $password;
                     $password = $this->link->quote(sha1($password));
 
                     $result = $this->link->prepare("UPDATE `users` SET `password` = $password WHERE `login`= $login AND `email`= $email");
@@ -251,4 +250,22 @@
             }
         }
         
+        /**
+         * Executing update query
+         * 
+         * @param int $id - specifical user id
+         * @param string $avatar - specifical user avatar
+         * 
+         * @return bool query result
+         */
+        public function updateAvatar($id, $avatar) {
+            try {
+                $avatar = $this->link->quote(trim($avatar));
+                return $this->link->query("UPDATE `users` SET `avatar`=$avatar WHERE `id`= '$id'");
+            }
+            // Error processing
+            catch (PDOException $e) {
+                $this->logs->requestError($e->getMessage());
+            }
+        }
 	}

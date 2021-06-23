@@ -14,11 +14,14 @@
         // Update password and send it to user mail
         if ($sql->updatePassword($login, $email)) {
             $sub = "Password reset";
-            $msg = "Your new $login account password:\n{$_SESSION['new_password']}";
+            $msg = "Your new $login account password:\n{$_SESSION['newPassword']}";
             $rec = $email;
-            mail($rec, $sub, $msg);
-
-            header('Location: index.php');
+            if (mail($rec, $sub, $msg)) {
+                header('Location: index.php');
+            }
+            else {
+                $message = '<font color="red">Error! Check your information...</font>';
+            }
         }
         else {
             $message = '<font color="red">Error! Check your information...</font>';

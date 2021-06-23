@@ -7,7 +7,7 @@
         Password:<br>
         <input type="password" name="password"><br>
         Remember me:
-        <input type="checkbox" name="remember_me">
+        <input type="checkbox" name="rememberMe">
         <a href="reset.php">Forgot password?</a><br>
         <input type="submit" name="letLog" value="Login">
         <input type="submit" name="reg" value="Register">
