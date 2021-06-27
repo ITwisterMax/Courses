@@ -1,0 +1,59 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "0a910759a1c81190dbc4fafbd5fa0b6d",
+    "packages": [
+        {
+            "name": "itwistermax/library",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ITwisterMax/Library.git",
+                "reference": "09d83a61f78207b647bd6db6af220fdc3d2400dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ITwisterMax/Library/zipball/09d83a61f78207b647bd6db6af220fdc3d2400dd",
+                "reference": "09d83a61f78207b647bd6db6af220fdc3d2400dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "course\\message\\": "src/course/message/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maksim Mikhalkov",
+                    "email": "solution.m@mail.ru"
+                }
+            ],
+            "description": "Class for working with messages",
+            "support": {
+                "issues": "https://github.com/ITwisterMax/Library/issues",
+                "source": "https://github.com/ITwisterMax/Library/tree/v1.0.0"
+            },
+            "time": "2021-06-27T15:20:34+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
+}

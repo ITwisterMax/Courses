@@ -1,0 +1,49 @@
+{
+    "packages": [
+        {
+            "name": "itwistermax/library",
+            "version": "v1.0.0",
+            "version_normalized": "1.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ITwisterMax/Library.git",
+                "reference": "09d83a61f78207b647bd6db6af220fdc3d2400dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ITwisterMax/Library/zipball/09d83a61f78207b647bd6db6af220fdc3d2400dd",
+                "reference": "09d83a61f78207b647bd6db6af220fdc3d2400dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4.0"
+            },
+            "time": "2021-06-27T15:20:34+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "course\\message\\": "src/course/message/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maksim Mikhalkov",
+                    "email": "solution.m@mail.ru"
+                }
+            ],
+            "description": "Class for working with messages",
+            "support": {
+                "issues": "https://github.com/ITwisterMax/Library/issues",
+                "source": "https://github.com/ITwisterMax/Library/tree/v1.0.0"
+            },
+            "install-path": "../itwistermax/library"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}
